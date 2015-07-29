@@ -1,2 +1,11 @@
-*
-!*.*
+#CMake files
+*.cmake
+CMakeFiles
+CMakeCache.txt
+Makefile
+
+#Bonus
+bonus
+
+# IDE files
+.idea
