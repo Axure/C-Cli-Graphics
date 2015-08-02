@@ -2,30 +2,51 @@
 #include "../../lib/utils.h"
 #include <stdio.h>
 #include <wchar.h>
+#include <locale.h>
 
-const wchar_t UR = L'┐';
-const wchar_t R = L'┤';
-const wchar_t L = L'├';
-const wchar_t U = L'┬';
-const wchar_t D = L'┴';
-const wchar_t DR = L'┘';
-const wchar_t UL = L'┌';
-const wchar_t DL = L'└';
-const wchar_t C = L'┼';
+const char * UR = "┐";
+const char * R = "┤";
+const char * L = "├";
+const char * U = "┬";
+const char * D = "┴";
+const char * DR = "┘";
+const char * UL = "┌";
+const char * DL = "└";
+const char * C = "┼";
 
-const wchar_t horse = L'*';
+const char * horse = "*";
 
 
 
 
 int main(int argc, char **argv) {
+    setlocale(LC_CTYPE, "chs");
+
     int n, m;
     n = string_to_number(argv[1]);
     m = string_to_number(argv[2]);
 
     printf("The chessboard is %d times %d.\n", n, m);
 
-    wprintf(L"%lc", R);
+    printf("%s", UL);
+    for (int i = 1; i < m - 1; ++i) {
+        printf("%s", U);
+    }
+    printf("%s\n", UR);
+
+    for (int j = 1; j < n - 1; ++j) {
+        printf("%s", L);
+        for (int i = 1; i < m - 1; ++i) {
+            printf("%s", C);
+        }
+        printf("%s\n", R);
+    }
+    // The crucial obstacle to ASCII board is that the characters are not square. Instead, they are tall.
+    printf("%s", DL);
+    for (int i = 1; i < m - 1; ++i) {
+        printf("%s", D);
+    }
+    printf("%s\n", DR);
 
     return 0;
 }

@@ -9,3 +9,11 @@ bonus
 
 # IDE files
 .idea
+
+
+# Doxygen
+html
+latex
+
+# Miscellaneous
+bin

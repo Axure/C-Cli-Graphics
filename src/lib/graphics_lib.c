@@ -105,12 +105,6 @@ void draw_circle() {
 
 // void 
 
-double test(double x, double y) {
-    return x * x + y * y - 9;
-}
-
-
-
 
 void mine_sweeper_init() {
     enum MineSweeperModelState mine_sweeper_model_state[SIZE][SIZE];

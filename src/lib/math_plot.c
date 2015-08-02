@@ -1,3 +1,5 @@
+#include "graphics_lib.h"
+
 void plot(two_dim_implicit func, struct real_coordinate origin, double horizontal_scope, double tolerance) {
     struct int_coordinate screen = get_screen_size();
     double unit = horizontal_scope / screen.y;
