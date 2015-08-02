@@ -1,6 +1,11 @@
 #include "../../lib/graphics_lib.h"
 #include "../../lib/math_plot.h"
 
+/*!
+ * A test function that represents a circle of radius 3
+ * \param x The x coordinate
+ * \param y The y coordinate
+ */
 double test(double x, double y) {
     return x * x + y * y - 9;
 }
@@ -15,7 +20,7 @@ int main() {
     plot(test, origin, 8, 5);
 
     get_screen_size();
-    mine_sweeper_init();
+//    mine_sweeper_init();
     refresh();
     plot(test, origin, 8, 5);
 

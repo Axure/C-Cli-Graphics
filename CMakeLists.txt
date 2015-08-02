@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.2)
-project(Final_Works)
+project(C_Cli_Graphics)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -DDEBUG")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c11 -DDEBUG")
 
 set (EXAMPLE_PATH src/examples)
 
@@ -25,6 +25,6 @@ add_executable(Util_Test src/test/util_test.c ${UTILS})
 
 add_executable(Mine_Sweeper ${EXAMPLE_PATH}/mine_sweeper/mine_sweeper.c ${GRAPHICS_LIB})
 
-add_executable(PlotACircle ${EXAMPLE_PATH}/plot_a_circle/plot_a_circle.c ${GRAPHICS_LIB} ${MATH_PLOT})
+add_executable(Plot_A_Circle ${EXAMPLE_PATH}/plot_a_circle/plot_a_circle.c ${GRAPHICS_LIB} ${MATH_PLOT})
 
 add_executable(Chess_Board ${EXAMPLE_PATH}/chessboard/chess_traceback.c ${GRAPHICS_LIB} ${UTILS})

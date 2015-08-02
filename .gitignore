@@ -2,7 +2,7 @@
 *.cmake
 CMakeFiles
 CMakeCache.txt
-Makefile
+*.log
 
 #Bonus
 bonus

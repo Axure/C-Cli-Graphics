@@ -48,10 +48,6 @@ void set_foreground(struct buffer_point *p_buffer_point, int r, int g, int b);
 
 void set_background(struct buffer_point *p_buffer_point, int r, int g, int b);
 
-void mine_sweeper_init();
-void mine_sweeper_recount(enum MineSweeperModelState model[SIZE][SIZE], int count[SIZE][SIZE], int size);
-void mine_sweeper_plot(enum MineSweeperModelState model[SIZE][SIZE], int count[SIZE][SIZE], int size);
-
 
 static inline double abs_d(double x) {
     return (x >= 0) ? x : -x;
