@@ -6,7 +6,7 @@
 
 // We should follow the MVC pattern.
 
-
+#define SIZE 8
 void mine_sweeper_init();
 
 void mine_sweeper_recount(enum MineSweeperModelState model[SIZE][SIZE], int count[SIZE][SIZE], int size);

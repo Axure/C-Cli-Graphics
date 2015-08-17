@@ -13,7 +13,6 @@ extern int buffer_changed;
 FILE *log_file;
 
 //const int SIZE = 8;
-#define SIZE 8
 
 typedef double(*two_dim_implicit)(double, double);
 
